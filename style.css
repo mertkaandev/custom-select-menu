@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Popins', sans-serif;
+};
+
+body {}
+
+.wrapper {
+    width: 375px;
+    margin: 130px auto 0;
+}
+
+.select-button, .options li {
+    display: flex;
+    align-items: center;
+    cursor: pointer
+} 
+
+.select-button{
+    height: 65px;
+    font-size: 22px;
+    justify-content: space-between;
+    padding: 0 20px;
+    border:  1px solid #4275bd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* oka efekt verir. ok direk yukarı dönmek yerine yavaş yavaş döner*/
+.select-button i{
+    transition: transform 0.3s linear;
+}
+
+/* class aktif iken ok yukarı bakmaktadır.*/
+.wrapper.active .select-button i{
+    transform: rotate(-180deg);
+}
+
+.content{
+    border: 1px solid #4275bd;
+    padding: 20px;
+    margin-top: 15px;
+    display: block;
+}
+
+.wrapper.active .content {
+    display: none;
+}
+
+.search {
+    position: relative
+}
+
+.search i{
+    left: 15px;
+    line-height: 50px;
+    position: absolute;
+}
+
+.search input{
+    height: 50px;
+    width: 100%;
+    font-size: 15px;
+    outline: none;
+    padding: 0 15px 0 43px;
+    border: 1px solid #4275bd;
+    border-radius: 5px;
+}
+
+.options {
+    margin-top: 20px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.options::-webkit-scrollbar{
+    width: 7px;
+}
+
+.options::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+    border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+    border-radius: 25px;
+}
+
+.options li{
+    height: 50px;
+    border-radius: 5px;
+    padding: 0 15px;
+    font-size: 19px;
+}
+
+.options li:hover{
+    background-color: #f2f2f2;
+}
